@@ -23,6 +23,8 @@ C# 11 支持的模式有很多，包含：
 
 而其中，不少模式都支持递归，也就意味着可以模式嵌套模式，以此来实现更加强大的匹配功能。
 
+如果你不清楚这些模式的话，可以访问 https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/operators/patterns 进行了解。
+
 模式匹配可以通过 `switch` 表达式来使用，也可以在普通的 `switch` 语句中作为 `case` 使用，还可以在 `if` 条件中通过 `is` 来使用。本文主要在 `switch` 表达式中使用模式匹配。
 
 那么接下来就对这些模式进行介绍。
