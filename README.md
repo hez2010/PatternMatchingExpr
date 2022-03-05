@@ -50,7 +50,7 @@ public abstract partial class Expr<T> where T : IBinaryNumber<T>
 public abstract record Operator
 {
     public record UnaryOperator(Operators Operator) : Operator;
-    public record BinaryOperator(BinaryOperators Operator) : Operator;
+    public record BinaryOperator(Operators Operator) : Operator;
 }
 ```
 
