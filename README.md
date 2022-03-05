@@ -289,7 +289,7 @@ public override bool Equals(object? obj) => obj is UnaryExpr({ Operator: var op 
 public override int GetHashCode() => (Op, Expr).GetHashCode();
 ```
 
-上面的代码中用到了属性模式 `{ Operator: var op }`，用来匹配属性的值，这里直接组合了声明模式将属性 `Operator` 的值赋值给了 `expr`。另外，C# 中的元组可以组合起来进行判等操作，因此不需要写 `op.Equals(Op.Operator) && expr.Equals(Expr)`，而是可以直接写 `(op, expr).Equals((Op.Operator, Expr))`。
+上面的代码中用到了属性模式 `{ Operator: var op }`，用来匹配属性的值，这里直接组合了声明模式将属性 `Operator` 的值赋值给了 `op`。另外，C# 中的元组可以组合起来进行判等操作，因此不需要写 `op.Equals(Op.Operator) && expr.Equals(Expr)`，而是可以直接写 `(op, expr).Equals((Op.Operator, Expr))`。
 
 #### 二元表达式
 和一元表达式差不多，区别在于这次多了一个操作数：
